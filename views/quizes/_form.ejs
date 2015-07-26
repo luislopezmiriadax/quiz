@@ -6,13 +6,12 @@
 	<select name="quiz[tema]">
 	<%
 	for(var i in temas) {
-    	var text = temas[i];
         var selected = "";
-        if (quiz.tema === text) {
+        if (quiz.tema === temas[i]) {
         	selected = "selected";
         }
     %>
-    <option value="<%= text %>" <%= selected %>><%= text %></option>
+    <option value="<%= temas[i] %>" <%= selected %>><%= temas[i] %></option>
     <%
         }
     %>
